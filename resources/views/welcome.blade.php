@@ -107,4 +107,68 @@
 
 </div>
 <br><br>
+<h1 align="center">Entrenadores</h1>
+<br><br>
+
+
+<div class="card mb-3 offset-3" style="max-width: 540px;" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://scontent.fclo1-2.fna.fbcdn.net/v/t1.0-9/10987668_885008824896715_502437332898790335_n.jpg?_nc_cat=106&ccb=3&_nc_sid=cdbe9c&_nc_eui2=AeFh8dOqL4yMIWDHn7KcRB012nDf65ejdjbacN_rl6N2NkfEyY28KUPfKvsH2qHgh0wH9wM3VofJZ2l0O1jiVpxm&_nc_ohc=Pc11ZuAzomwAX-epOLQ&_nc_ht=scontent.fclo1-2.fna&oh=465bcb2be1696550536ab05b337437e8&oe=60509095"
+        alt="..." width="170" height="200"
+      >
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Mauricio Dueñas</h5>
+        <p class="card-text">Entrenador y director de Equipo Superior, experto en lucha olimpica, kickBoxing y Muay Thai.
+          Campeon de MMA en multiples ocaciones.
+        </p>
+        <p class="card-text"><small class="text-muted">Cel: 301 384 3537</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card mb-3 offset-3 " style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://scontent.fclo1-1.fna.fbcdn.net/v/t1.0-9/14034804_1194021497328778_8292214504752698859_n.jpg?_nc_cat=107&ccb=3&_nc_sid=9267fe&_nc_eui2=AeEFCMjSm5CxCYGNrqYZOCMGMsfhXvzLP7wyx-Fe_Ms_vGfliJXN0SO6r72g4w3tkcdPw45CDTJbiwNbWkXiiyTy&_nc_ohc=UojUpYlrTmYAX_utucQ&_nc_oc=AQkFOL5EeQwwlfc_3bn7BThZOGgH5_o1VT7z09hpsd7du0-ARg41Ni6ux9TvsQTK2Vc&_nc_ht=scontent.fclo1-1.fna&oh=003c9ef47d994e5d8292997093cc8838&oe=60514626"
+        alt="..." width="180" height="200"
+      >
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Juan David Dueñas</h5>
+        <p class="card-text">Entrenador de Equipo Superior y Grecomma. experto en Jiu-Jitsu, Sambo, y lucha. Campeon de MMA
+          y puesto numero 5 en el rankin mundial de Sambo 2020
+        </p>
+        <p class="card-text"><small class="text-muted">Cel: xxx xxx xxxx </small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card mb-3 offset-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://scontent.fclo1-2.fna.fbcdn.net/v/t1.0-9/67638905_10219437897032194_4675909020886761472_n.jpg?_nc_cat=105&ccb=3&_nc_sid=09cbfe&_nc_eui2=AeGiQGMCpyP_l0k3aEggEZFT8cN9mnz3WObxw32afPdY5lAWpPxqUWWZkGILUMifYSoP77LWaoCslGPsxL8-Knon&_nc_ohc=c4TkAkXO8ZUAX-1f2P3&_nc_ht=scontent.fclo1-2.fna&oh=89002230ae91c138fd9b48b142d13dcc&oe=60500B07"
+        alt="..." width="180" height="200"
+      >
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Diego Dueñas</h5>
+        <p class="card-text">Entrenador Equipo Superior y liga de nariño de Lucha. Experto en Lucha olimpica y trabajo funcional
+          Campeon nacional de lucha olimpica en multiples ocaciones. ademas lidera el grupo kids de MMA </p>
+        <p class="card-text"><small class="text-muted">Cel: xxx xxx xxxx</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
 @stop

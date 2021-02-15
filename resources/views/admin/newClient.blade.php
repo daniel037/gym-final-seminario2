@@ -2,49 +2,80 @@
  
 @section('content')
 <br><br>
-<form>
-    <h1>Agregar Deportista</h1>
 
-  <div class="form-group row">
-    <label name="nombre" class="col-sm-2 col-form-label">Nombre: </label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" placeholder="Nombre">
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label name="id" class="col-sm-2 col-form-label">Identificacion: </label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" placeholder="Identificacion">
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label name="celular" class="col-sm-2 col-form-label">Celular: </label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" placeholder="Celular">
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label name="entreno" class="col-sm-2 col-form-label">Tipo de Entrenamiento</label>
-    <div class="col-sm-10">
-     <select class="form-select" aria-label="Default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">Artes Marciales</option>
-          <option value="2">Crossfit</option>
-          <option value="3">Ambos</option>
-     </select>
-    </div>
-  </div>
-
+<h2 align="center">Agregar Deportista</h2>
+<form class="row g-3" style="border-style: solid;">
+<br><br>
   
-
-  <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Agregar</button>
-    </div>
+  <div class="col-md-6" >
+    <label for="inputName" class="form-label">Nombres</label>
+    <input type="text" class="form-control" id="inputName">
   </div>
+
+  <div class="col-md-6">
+    <label for="inputApellidos" class="form-label">Apellidos</label>
+    <input type="text" class="form-control" id="inputApellido">
+  </div>
+
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Dirección</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Dirección">
+  </div>
+
+  <div class="col-md-6" >
+    <label for="inputCel" class="form-label">Celular</label>
+    <input type="text" class="form-control" id="inputCel">
+  </div>
+
+  <div class="col-md-6">
+    <label for="inputCorreo" class="form-label">Correo</label>
+    <input type="text" class="form-control" id="inputCorreo">
+  </div>
+
+  <div class="col-md-12">
+    <label for="inputfoto" class="form-label">Fotografia</label>
+    <input type="file" class="form-control" id="inputFoto">
+  </div>
+
+
+  <fieldset class="col-12">
+
+    <legend class="col-form-label col-md-6 ">Disciplina</legend>
+
+    <div class="col-md-6">
+      <div class="form-check">
+
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="mma" checked>
+        <label class="form-check-label" for="gridRadios1">
+          Artes Marciales
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="crossfit">
+        <label class="form-check-label" for="gridRadios2">
+          Crossfit
+        </label>
+      </div>
+      <div class="form-check disabled">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="ambas" >
+        <label class="form-check-label" for="gridRadios3">
+          MMA y Crossfit
+        </label>
+      </div>
+    </div>
+    <br>
+  </fieldset>
+
+ 
+  <br><br>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Registrar</button>
+  </div>
+  <br><br>
 
 </form>
+<br><br>
+
+
+
 @stop
