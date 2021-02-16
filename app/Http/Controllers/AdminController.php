@@ -15,4 +15,10 @@ class AdminController extends Controller
     {
         return view('admin.editClient');
     }
+
+    public function getList()
+    {
+        return view('admin.studentList');
+    }
+
 }

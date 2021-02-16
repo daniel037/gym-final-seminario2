@@ -21,5 +21,5 @@ Route::get('/newClient', [AdminController::class, 'getNew']);
 
 Route::get('/editClient', [AdminController::class, 'getEdit']);
 
-
+Route::get('/studenList', [AdminController::class, 'getList']);
 

@@ -65,7 +65,6 @@
   </div>
 </div>
 
-
 <div class="card" style="width: 18rem;">
   <img src="https://scontent.fclo1-1.fna.fbcdn.net/v/t1.0-9/146247207_3845913455472889_66796177229500327_o.jpg?_nc_cat=108&ccb=3&_nc_sid=8bfeb9&_nc_eui2=AeFM54SAPQW4veFBiIo26AQxjL46j-0rjtCMvjqP7SuO0NJiOc0z0KYYVjUpuCwRCYPHBAWnOygKA6G46eE_zFtt&_nc_ohc=MDXJLgIHBSkAX-IDEmz&_nc_ht=scontent.fclo1-1.fna&oh=6c99d805b9453c4bbd9d88a6a03e3cce&oe=604C056C" class="card-img-top" alt="...">
   <div class="card-body">
@@ -78,10 +77,6 @@
     
   </div>
 </div>
-
-
-
-
 
 <div class="card" style="width: 18rem;">
   <img src="https://scontent.fclo1-1.fna.fbcdn.net/v/t1.0-9/132670664_10223325561903453_1634315793038869737_n.jpg?_nc_cat=107&ccb=3&_nc_sid=19026a&_nc_eui2=AeGBLuB-Ks8fXk_C46JMGclwVtpgcqKnbItW2mByoqdsiwTvDArJxxx6KyihZYiSBlqup0x3rFYzJ6DsuZdlJ_bu&_nc_ohc=r-QC6I9Yk6cAX_zYSwx&_nc_ht=scontent.fclo1-1.fna&oh=ee282d7d1006e7bbabac6a84fd0f1a3a&oe=604F5604" class="card-img-top" alt="...">
@@ -130,7 +125,6 @@
   </div>
 </div>
 
-
 <div class="card mb-3 offset-3 " style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
@@ -149,7 +143,6 @@
     </div>
   </div>
 </div>
-
 
 <div class="card mb-3 offset-3" style="max-width: 540px;">
   <div class="row g-0">
