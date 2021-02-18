@@ -17,9 +17,14 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'getHome']);
 
-Route::get('/newClient', [AdminController::class, 'getNew']);
+Route::get('/admin/newClient', [AdminController::class, 'getNew']);
 
-Route::get('/editClient', [AdminController::class, 'getEdit']);
+Route::get('/admin/editClient', [AdminController::class, 'getEdit']);
 
-Route::get('/studenList', [AdminController::class, 'getList']);
+Route::get('/admin/studentList', [AdminController::class, 'getList']);
+
+Route::get('/admin/student/{id}', [AdminController::class, 'getStudent']);
+
+
+
 

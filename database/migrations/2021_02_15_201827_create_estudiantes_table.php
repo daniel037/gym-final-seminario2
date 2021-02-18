@@ -20,8 +20,9 @@ class CreateEstudiantesTable extends Migration
             $table->string('direccion');
             $table->string('correo');
             $table->string('celular');
-            $table->string('fotografia');
+            $table->text('fotografia');
             $table->string('disciplina');
+            $table->boolean('estado');
             $table->timestamps();
         });
     }
