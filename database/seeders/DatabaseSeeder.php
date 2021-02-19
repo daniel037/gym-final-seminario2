@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Estudiante;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -69,10 +70,23 @@ class DatabaseSeeder extends Seeder
         }
     }
 
+    private function seedUsers()
+    {
+        \DB::table('users')->delete();
+
+        $u = new User;
+        $u -> name = 'admin';
+        $u -> email = 'admin@hotmail.es';
+        $u -> password = bcrypt('123456');
+        $u -> save();
+    }
+
 
     public function run()
     {
-        self::seedEstudiantes();
-        $this->command->info('tabla estudiantes inicializada on datos');
+        //self::seedEstudiantes();
+        self::seedUsers();
+
+        $this->command->info('tabla users inicializada on datos');
     }
 }

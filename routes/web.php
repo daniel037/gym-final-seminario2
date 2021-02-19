@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,16 +13,12 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'getHome']);
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/admin/newClient', [AdminController::class, 'getNew']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('/admin/editClient', [AdminController::class, 'getEdit']);
-
-Route::get('/admin/studentList', [AdminController::class, 'getList']);
-
-Route::get('/admin/student/{id}', [AdminController::class, 'getStudent']);
-
-
-
-
+require __DIR__.'/auth.php';
