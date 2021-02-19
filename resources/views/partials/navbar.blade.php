@@ -26,14 +26,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item {{ Request::is('catalog') && ! Request::is('catalog/create')? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('/catalog')}}">
+                        <a class="nav-link" href="{{url('/admin/studentList')}}">
                             <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
-                            Catálogo
+                            Estudiantes
                         </a>
                     </li>
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('/catalog/create')}}">
-                            <span>&#10010</span> Nueva película
+                        <a class="nav-link" href="{{url('admin/newClient')}}">
+                            <span>&#10010</span> Nuevo Estudiante
                         </a>
                     </li>
                 </ul>
