@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Estudiante;
 use App\Models\User;
+use App\Models\Rutina;
 
 class DatabaseSeeder extends Seeder
 {
@@ -47,7 +48,22 @@ class DatabaseSeeder extends Seeder
     );
 
 
-
+    private $arrayRutinas = array(
+        array(
+            'nombre' => 'kick boxing',
+            'descripcion' => 'Kick Boxing para principiantes. Aprende los fundamentos de este arte marcial, guardia y postura correcta, golpes básicos de puños y golpes básicos de patadas… “Entrena duro lucha fácil”... ',
+            'tipo' => 'Artes Marciales Mixtas',
+            'nombre_ej1' => 'Guardia Básica',
+            'descrpcion_ej1' => 'Con este ejercicio aprenderás cual es la posición básica de combate, importante para realizar una buena defensa y ejecutar golpes sólidos y fluidos.',
+            'video_ej1' => 'https://www.youtube.com/embed/2TSQTHHYzvc',
+            'nombre_ej2' => 'Puños Básicos',
+            'descrpcion_ej2' => 'Aprende los golpes y posiciones básicas para efectuar un buen golpe de puño ',
+            'video_ej2' => 'https://www.youtube.com/embed/6LSgkGv56ko',
+            'nombre_ej3' => 'Patadas Básica',
+            'descrpcion_ej3' => 'Aprende los golpes y posiciones básicas para efectuar un buen golpe de patada ',
+            'video_ej3' => 'https://www.youtube.com/embed/Wl3arnPkeyM',
+        ),
+    );
 
     
     private function seedEstudiantes()
@@ -82,11 +98,37 @@ class DatabaseSeeder extends Seeder
     }
 
 
+    private function seedRutinas()
+    {
+        \DB::table('rutinas')->delete();
+
+        foreach($this->arrayRutinas as $rutina)
+        {
+            $r = new Rutina;
+            $r-> nombre = $rutina['nombre'];
+            $r-> descripcion = $rutina['descripcion'];
+            $r-> tipo = $rutina['tipo'];
+            $r-> nombre_ej1 = $rutina['nombre_ej1'];
+            $r-> descrpcion_ej1 = $rutina['descrpcion_ej1'];
+            $r-> video_ej1 = $rutina['video_ej1'];
+            $r-> nombre_ej2 = $rutina['nombre_ej2'];
+            $r-> descrpcion_ej2 = $rutina['descrpcion_ej2'];
+            $r-> video_ej2 = $rutina['video_ej2'];
+            $r-> nombre_ej3 = $rutina['nombre_ej3'];
+            $r-> descrpcion_ej3 = $rutina['descrpcion_ej3'];
+            $r-> video_ej3 = $rutina['video_ej3'];
+            $r-> save();
+        }
+    }
+
+
+
     public function run()
     {
         //self::seedEstudiantes();
-        self::seedUsers();
+        //self::seedUsers();
+        self::seedRutinas();
 
-        $this->command->info('tabla users inicializada on datos');
+        $this->command->info('tabla rutinas inicializada on datos');
     }
 }

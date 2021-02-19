@@ -11,7 +11,7 @@
 
         <ul class="navbar-nav mr-auto">
             <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
-                <a class="nav-link" href="{{url('admin/newClient')}}">
+                <a class="nav-link" href="{{url('rutinas')}}">
                     Rutinas
                 </a>
             </li>
