@@ -2,12 +2,20 @@
     <div class="container">
     
         <a class="navbar-brand" href="/" style="color:#000">
-        Equipo Superior
+            Equipo Superior
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
+                <a class="nav-link" href="{{url('admin/newClient')}}">
+                    Rutinas
+                </a>
+            </li>
+        </ul>
 
         @if( !Auth::check() )
             <ul class="navbar-nav navbar-right">

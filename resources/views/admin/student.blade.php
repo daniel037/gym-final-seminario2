@@ -17,21 +17,21 @@
     <a href="..." class="btn btn-danger"> Eliminar Estudiante </a>
     <a href="{{url('/admin/editClient')}}/{{$estudiantes->id}}" class="btn btn-warning"> Editar Estudiante </a>
     <a href="{{url('/admin/studentList')}}" class="btn btn-primary"> Volver al listado</a>
+    
     <br><br>
 
     <?php
         if($estudiantes->estado)
         {
-            echo "<h3>Mensualidad  OK</h3>";
-            echo "<button type='button' class='btn btn-success'>Actualizar Pago </button>";  
+            echo "<h3 style='color: #6c2eb9;'>Mensualidad  OK</h3>";
         }
         else
         {
             
-            echo "<h3>Mensualidad Vencido</h3>";
-            echo "<button type='button' class='btn btn-danger'>Actualizar Pago </button>"; 
+            echo "<h3 style='color: #FF0000'>Mensualidad Vencida</h3>";
         }
     ?> 
+    <a href="{{url('/admin/pago')}}/{{$estudiantes->id}}" class='btn btn-success'>Actualizar Pago</a>
             
      
  </div> 

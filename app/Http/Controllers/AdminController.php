@@ -12,15 +12,15 @@ class AdminController extends Controller
         return view('admin.newClient');
     }
 
-    public function getEdit()
+    public function getEdit($id)
     {
-        return view('admin.editClient');
+        $estudiantes = Estudiante::findOrFail($id);
+        return view('admin.editClient', compact('estudiantes'));
     }
 
     public function getList()
     {
         $estudiantes = Estudiante::all();
-
         return view('admin.studentList', compact('estudiantes'));
     }
 
@@ -28,6 +28,12 @@ class AdminController extends Controller
     {
         $estudiantes = Estudiante::findOrFail($id);
         return view('admin.student', compact('estudiantes'));
+    }
+
+    public function getPago($id)
+    {
+        $estudiantes = Estudiante::findOrFail($id);
+        return view('admin.pago', compact('estudiantes'));
     }
 
 }

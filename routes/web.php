@@ -20,11 +20,13 @@ Route::get('/', [HomeController::class, 'getHome']);
 
 Route::get('/admin/newClient', [AdminController::class, 'getNew']);
 
-Route::get('/admin/editClient', [AdminController::class, 'getEdit']);
-
 Route::get('/admin/studentList', [AdminController::class, 'getList']);
 
+Route::get('/admin/editClient/{id}', [AdminController::class, 'getEdit']);
+
 Route::get('/admin/student/{id}', [AdminController::class, 'getStudent']);
+
+Route::get('/admin/pago/{id}', [AdminController::class, 'getPago']);
 
 
 require __DIR__.'/auth.php';
