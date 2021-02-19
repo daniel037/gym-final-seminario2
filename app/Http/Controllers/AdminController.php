@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Estudiante;
 
 class AdminController extends Controller
 {
@@ -11,14 +12,28 @@ class AdminController extends Controller
         return view('admin.newClient');
     }
 
-    public function getEdit()
+    public function getEdit($id)
     {
-        return view('admin.editClient');
+        $estudiantes = Estudiante::findOrFail($id);
+        return view('admin.editClient', compact('estudiantes'));
     }
 
     public function getList()
     {
-        return view('admin.studentList');
+        $estudiantes = Estudiante::all();
+        return view('admin.studentList', compact('estudiantes'));
+    }
+
+    public function getStudent($id)
+    {
+        $estudiantes = Estudiante::findOrFail($id);
+        return view('admin.student', compact('estudiantes'));
+    }
+
+    public function getPago($id)
+    {
+        $estudiantes = Estudiante::findOrFail($id);
+        return view('admin.pago', compact('estudiantes'));
     }
 
 }
