@@ -20,6 +20,8 @@ use App\Http\Controllers\RutinaController;
 Route::get('/', [HomeController::class, 'getHome']);
 
 Route::get('/admin/newClient', [AdminController::class, 'getNew']);
+Route::post('/admin/newClient', [AdminController::class, 'postNew']);
+
 
 Route::get('/admin/studentList', [AdminController::class, 'getList']);
 
@@ -32,6 +34,10 @@ Route::get('/admin/pago/{id}', [AdminController::class, 'getPago']);
 Route::get('/rutinas', [RutinaController::class, 'getRutinaList']);
 
 Route::get('/admin/newRutina', [RutinaController::class, 'getNewRutina']);
+Route::post('/admin/newRutina', [RutinaController::class, 'postNewRutina']);
+
+
+
 
 Route::get('/admin/editRutina', [RutinaController::class, 'getEditRutina']);
 

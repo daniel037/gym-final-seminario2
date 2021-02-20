@@ -12,6 +12,24 @@ class AdminController extends Controller
         return view('admin.newClient');
     }
 
+    public function postNew(Request $request)
+    {
+        $p = new Estudiante;
+        $p->id = $request->id;
+        $p->nombres = $request->nombres;
+        $p->apellidos = $request->apellidos;
+        $p->direccion = $request->direccion;
+        $p->correo = $request->correo;
+        $p->celular = $request->celular;
+        $p->fotografia = $request->fotografia;
+        $p->disciplina = $request->disciplina;
+        $p->estado = true;
+        $p->save();
+
+        return redirect() -> action([AdminController::class, 'getList']);
+    }
+
+
     public function getEdit($id)
     {
         $estudiantes = Estudiante::findOrFail($id);
