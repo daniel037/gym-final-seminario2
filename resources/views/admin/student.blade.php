@@ -21,7 +21,8 @@
     <br><br>
 
     <?php
-        if($estudiantes->estado)
+        $fcha = date("Y-m-d");
+        if($estudiantes->fecha > $fcha)
         {
             echo "<h3 style='color: #6c2eb9;'>Mensualidad  OK</h3>";
         }

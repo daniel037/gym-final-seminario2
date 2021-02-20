@@ -10,7 +10,10 @@
 	    	<div class="col-xs-6 col-sm-4 col-md-3 text-center">       
 				<h4 style="min-height:45px;margin:5px 0 10px 0">                   
 	               {{$rutina->tipo}}	        
-	           	</h4>   
+	           	</h3>   
+				   <h4 style="min-height:45px;margin:5px 0 10px 0">                   
+	               {{$rutina->nombre}}	        
+	           	</h3> 
 	       		<a href="{{url('/showRutina/' . $rutina->id)}}">  
 				   @if($rutina->tipo == "Artes Marciales Mixtas")
 						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCdnfXiPQilZRTlzMK3uvl_OSC4ZllzUbU4A&usqp=CAU" style="height:200px"/>    

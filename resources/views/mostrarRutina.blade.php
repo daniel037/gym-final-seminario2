@@ -37,8 +37,14 @@
 			allowfullscreen
 		>
 		</iframe>
- 	  
-     
+
+		<br>
+
+		@if( Auth::check() )
+			<a href="{{url('/admin/editRutina')}}/{{$rutinas->id}}" class="btn btn-warning"> Editar Rutina </a>
+		@endif
+
+		
  </div> 
 </div>
 <br><br>

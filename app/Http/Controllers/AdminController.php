@@ -23,6 +23,8 @@ class AdminController extends Controller
         $p->celular = $request->celular;
         $p->fotografia = $request->fotografia;
         $p->disciplina = $request->disciplina;
+        $p->valor = $request->valor;
+        $p->fecha = $request->fecha;
         $p->estado = true;
         $p->save();
 
@@ -35,6 +37,21 @@ class AdminController extends Controller
         $estudiantes = Estudiante::findOrFail($id);
         return view('admin.editClient', compact('estudiantes'));
     }
+
+    public function putEdit(Request $request, $id)
+    {
+        $p = Estudiante::find($id);
+        $p->nombres = $request->nombres;
+        $p->apellidos = $request->apellidos;
+        $p->direccion = $request->direccion;
+        $p->correo = $request->correo;
+        $p->celular = $request->celular;
+        $p->disciplina = $request->disciplina;
+        $p->save();
+
+        return redirect() -> action([AdminController::class, 'getList']);
+    }
+
 
     public function getList()
     {
@@ -52,6 +69,15 @@ class AdminController extends Controller
     {
         $estudiantes = Estudiante::findOrFail($id);
         return view('admin.pago', compact('estudiantes'));
+    }
+
+    public function putPago(Request $request, $id)
+    {
+        $p = Estudiante::find($id);
+        $p->valor = $request->valor;
+        $p->fecha = $request->fecha;
+        $p->save();
+        return redirect() -> action([AdminController::class, 'getList']);
     }
 
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href='/assets/bootstrap/js/bootstrap.min.js' >
 
 
-    <title>Hello, world!</title>
+    <title>Equipo Superior</title>
 
   </head>
   <body>

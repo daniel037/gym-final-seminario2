@@ -38,6 +38,16 @@
     <input type="text" class="form-control" id="fotografia" name="fotografia">
   </div>
 
+  <div class="col-md-6" >
+    <label for="valor" class="form-label">Valor cancelado</label>
+    <input type="text" class="form-control" id="valor" name="valor">
+  </div>
+
+  <div class="col-md-6">
+    <label for="fecha" class="form-label">Fecha limite</label>
+    <input type="date" class="form-control" id="fecha" name="fecha">
+  </div>
+
 
   <fieldset class="col-12">
 

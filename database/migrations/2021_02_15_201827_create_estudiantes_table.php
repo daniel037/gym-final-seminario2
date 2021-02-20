@@ -22,6 +22,8 @@ class CreateEstudiantesTable extends Migration
             $table->string('celular');
             $table->text('fotografia');
             $table->string('disciplina');
+            $table->string('valor');
+            $table->date('fecha');
             $table->boolean('estado');
             $table->timestamps();
         });

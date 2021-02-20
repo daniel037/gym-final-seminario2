@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             'celular' => '3023662300',
             'fotografia' => 'https://scontent.fclo1-2.fna.fbcdn.net/v/t1.0-9/135739390_5373735745973505_2709166115985840698_n.jpg?_nc_cat=102&ccb=3&_nc_sid=09cbfe&_nc_eui2=AeHrGvdR5ctpwdIP8OtxmSNlRakt5TpJPxlFqS3lOkk_GbKr3Aoq7VHfkOYNASr5wou9wUIXsVhCvyXGl0GxyFh1&_nc_ohc=Ec-3uOElhrAAX9kn98K&_nc_ht=scontent.fclo1-2.fna&oh=1291f5e08e72c2be6b78ff787847bd6d&oe=605625D2',
             'disciplina' => 'Artes Marciales Mixtas',
+            'valor' => '100000',
+            'fecha' => '2021/03/20',
             'estado' => true,
         ),
         array(
@@ -32,6 +34,8 @@ class DatabaseSeeder extends Seeder
             'celular' => '302000000',
             'fotografia' => 'https://scontent.fclo1-2.fna.fbcdn.net/v/t1.0-9/88116389_2617078498528473_7970219984267771904_n.jpg?_nc_cat=104&ccb=3&_nc_sid=174925&_nc_eui2=AeGF79-OHKHsGqDf7rh4otGZiN9dgyGtYaGI312DIa1hocPePXHTml_jBEQ3W31Ey35NhM082EPVxlu4WOwFp547&_nc_ohc=G82gApoBjOAAX-P_kDc&_nc_ht=scontent.fclo1-2.fna&oh=273b529c1365e95bb4c22a7a2bc5fea0&oe=6052B81C',
             'disciplina' => 'Crossfit',
+            'valor' => '100000',
+            'fecha' => '2021/03/20',
             'estado' => true,
         ),
         array(
@@ -43,6 +47,8 @@ class DatabaseSeeder extends Seeder
             'celular' => '3050000000',
             'fotografia' => 'https://scontent.fclo1-2.fna.fbcdn.net/v/t1.0-9/81849347_3337240529679489_8766080370564136960_o.jpg?_nc_cat=104&ccb=3&_nc_sid=09cbfe&_nc_eui2=AeHN8zbAYRP5Gmwmjl_oTt9C4WfS9DfnAUDhZ9L0N-cBQD16M6b83c6_9u3JpKjVSBYMNg45CEDZXp0oLwjULC2p&_nc_ohc=J2JO9EVrdCIAX-vA7CD&_nc_ht=scontent.fclo1-2.fna&oh=603dfd6e6b787467842707b3c25cc49d&oe=6053D9D8',
             'disciplina' => 'Artes Marciales Mixtas',
+            'valor' => '100000',
+            'fecha' => '2021/01/20',
             'estado' => false,
         ),
     );
@@ -81,6 +87,8 @@ class DatabaseSeeder extends Seeder
             $p->celular = $estudiante['celular'];
             $p->fotografia = $estudiante['fotografia'];
             $p->disciplina = $estudiante['disciplina'];
+            $p->valor = $estudiante['valor'];
+            $p->fecha = $estudiante['fecha'];
             $p->estado = $estudiante['estado'];
             $p->save();
         }
@@ -125,10 +133,10 @@ class DatabaseSeeder extends Seeder
 
     public function run()
     {
-        //self::seedEstudiantes();
+        self::seedEstudiantes();
         //self::seedUsers();
-        self::seedRutinas();
+        //self::seedRutinas();
 
-        $this->command->info('tabla rutinas inicializada on datos');
+        $this->command->info('tabla estudiantes inicializada on datos');
     }
 }
