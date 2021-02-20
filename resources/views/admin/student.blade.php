@@ -14,7 +14,7 @@
     <b>Celular:</b><label> {{$estudiantes->celular}} </label>    
     <h3>{{$estudiantes->disciplina}}</h3>
     
-    <a href="..." class="btn btn-danger"> Eliminar Estudiante </a>
+    <a href="{{url('/admin/deleteClient')}}/{{$estudiantes->id}}" class="btn btn-danger"> Eliminar Estudiante </a>
     <a href="{{url('/admin/editClient')}}/{{$estudiantes->id}}" class="btn btn-warning"> Editar Estudiante </a>
     <a href="{{url('/admin/studentList')}}" class="btn btn-primary"> Volver al listado</a>
     

@@ -29,8 +29,13 @@
 	           	</p>     
 	       </div>       
 	   	@endforeach
+		
 	</div>
-
+	<br><br>
+	@if( Auth::check() )
+		<a href="{{url('/admin/newRutina')}}" class="btn btn-primary">Nueva Rutina</a>
+	@endif
+	<br><br>
 	
 	@stop
 

@@ -7,7 +7,7 @@
         {{ $logo }}
     </div>
 
-    <div class="  col-sm-11 align-self-center text-center">
+    <div class="col-sm-11 align-self-center text-center">
         {{ $slot }}
     </div>
 </div>

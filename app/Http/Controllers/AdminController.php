@@ -53,6 +53,15 @@ class AdminController extends Controller
     }
 
 
+    public function getDelete(Request $request, $id)
+    {
+        $p = Estudiante::find($id);
+        $p->delete();
+
+        return redirect() -> action([AdminController::class, 'getList']);
+    }
+
+
     public function getList()
     {
         $estudiantes = Estudiante::all();

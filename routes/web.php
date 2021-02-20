@@ -19,43 +19,35 @@ use App\Http\Controllers\RutinaController;
 
 Route::get('/', [HomeController::class, 'getHome']);
 
-Route::get('/admin/newClient', [AdminController::class, 'getNew']);
-Route::post('/admin/newClient', [AdminController::class, 'postNew']);
-
-
-Route::get('/admin/studentList', [AdminController::class, 'getList']);
-
-
-Route::get('/admin/editClient/{id}', [AdminController::class, 'getEdit']);
-Route::put('/admin/editClient/{id}', [AdminController::class, 'putEdit']);
-
-
-
-
-Route::get('/admin/student/{id}', [AdminController::class, 'getStudent']);
-
-
-Route::get('/admin/pago/{id}', [AdminController::class, 'getPago']);
-Route::put('/admin/pago/{id}', [AdminController::class, 'putPago']);
-
-
-
 Route::get('/rutinas', [RutinaController::class, 'getRutinaList']);
 
-
-Route::get('/admin/newRutina', [RutinaController::class, 'getNewRutina']);
-Route::post('/admin/newRutina', [RutinaController::class, 'postNewRutina']);
-
-
-Route::get('/admin/editRutina/{id}', [RutinaController::class, 'getEditRutina']);
-Route::put('/admin/editRutina/{id}', [RutinaController::class, 'putEditRutina']);
-
-
-
-
-
-
 Route::get('/showRutina/{id}', [RutinaController::class, 'getRutina']);
+
+Route::group(['middleware' => 'auth'], function() {
+
+    Route::get('/admin/newClient', [AdminController::class, 'getNew']);
+    Route::post('/admin/newClient', [AdminController::class, 'postNew']);
+
+
+    Route::get('/admin/studentList', [AdminController::class, 'getList']);
+
+
+    Route::get('/admin/editClient/{id}', [AdminController::class, 'getEdit']);
+    Route::put('/admin/editClient/{id}', [AdminController::class, 'putEdit']);
+
+    Route::get('/admin/deleteClient/{id}', [AdminController::class, 'getDelete']);
+
+    Route::get('/admin/student/{id}', [AdminController::class, 'getStudent']);
+
+    Route::get('/admin/pago/{id}', [AdminController::class, 'getPago']);
+    Route::put('/admin/pago/{id}', [AdminController::class, 'putPago']);
+
+    Route::get('/admin/newRutina', [RutinaController::class, 'getNewRutina']);
+    Route::post('/admin/newRutina', [RutinaController::class, 'postNewRutina']);
+
+    Route::get('/admin/editRutina/{id}', [RutinaController::class, 'getEditRutina']);
+    Route::put('/admin/editRutina/{id}', [RutinaController::class, 'putEditRutina']);
+});
 
 
 require __DIR__.'/auth.php';
